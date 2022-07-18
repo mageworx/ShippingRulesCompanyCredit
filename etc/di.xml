@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!--
+    Copyright © MageWorx. All rights reserved.
+    See LICENSE.txt for license details.
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Add attributes to company conditions -->
+    <type name="MageWorx\ShippingRulesCompany\Api\CompanyAttributesStackInterface">
+        <arguments>
+            <argument name="attributes" xsi:type="array">
+                <item name="company_credit_available_limit" xsi:type="object">MageWorx\ShippingRulesCompanyCredit\Model\Attribute\CompanyCreditAvailableLimit</item>
+                <item name="company_credit_balance" xsi:type="object">MageWorx\ShippingRulesCompanyCredit\Model\Attribute\CompanyCreditBalance</item>
+                <item name="company_credit_exceed_limit" xsi:type="object">MageWorx\ShippingRulesCompanyCredit\Model\Attribute\CompanyCreditExceedLimit</item>
+            </argument>
+        </arguments>
+    </type>
+    <!-- Virtual attributes -->
+    <virtualType name="MageWorx\ShippingRulesCompanyCredit\Model\Attribute\CompanyCreditAvailableLimit" type="MageWorx\ShippingRules\Model\Attribute\RuleAttributeBlank">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="code" xsi:type="string">company_credit_available_limit</item>
+                <item name="label" xsi:type="string">Company Credit: Available Limit</item>
+                <item name="input_type" xsi:type="string">numeric</item>
+                <item name="value_type" xsi:type="string">text</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="MageWorx\ShippingRulesCompanyCredit\Model\Attribute\CompanyCreditBalance" type="MageWorx\ShippingRules\Model\Attribute\RuleAttributeBlank">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="code" xsi:type="string">company_credit_balance</item>
+                <item name="label" xsi:type="string">Company Credit: Balance</item>
+                <item name="input_type" xsi:type="string">numeric</item>
+                <item name="value_type" xsi:type="string">text</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="MageWorx\ShippingRulesCompanyCredit\Model\Attribute\CompanyCreditExceedLimit" type="MageWorx\ShippingRules\Model\Attribute\RuleAttributeBlank">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="code" xsi:type="string">company_credit_exceed_limit</item>
+                <item name="label" xsi:type="string">Company Credit: Allow To Exceed Credit Limit</item>
+                <item name="input_type" xsi:type="string">select</item>
+                <item name="value_type" xsi:type="string">select</item>
+                <item name="source_model" xsi:type="object">Magento\Config\Model\Config\Source\Yesno</item>
+            </argument>
+        </arguments>
+    </virtualType>
+</config>

@@ -1,0 +1,22 @@
+{
+    "name": "mageworx/module-shippingrules-company-credit",
+    "description": "Shipping Rules B2B Company Credit compatibility submodule",
+    "require": {
+        "mageworx/module-shippingrules-company": "^1.0",
+        "magento/module-company-credit": "^100.3"
+    },
+    "type": "magento2-module",
+    "version": "0.0.1",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "MageWorx\\ShippingRulesCompanyCredit\\": ""
+        }
+    }
+}
