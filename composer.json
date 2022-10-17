@@ -6,7 +6,7 @@
         "magento/module-company-credit": "^100.3"
     },
     "type": "magento2-module",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
