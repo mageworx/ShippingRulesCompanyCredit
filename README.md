@@ -1,4 +1,4 @@
-# MageWorx Shipping Rules Company Credit Conditions (B2B) Extension for Magento 2
+# Mageworx Shipping Rules Company Credit Conditions (B2B) Extension for Magento 2
 
 ## Upload the extension
 
